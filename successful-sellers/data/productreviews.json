@@ -1,0 +1,30 @@
+{"seller_id":1,"product_id":17,"rate":2.5,"review":null,"created_date":"1684727397000","last_modified_date":"1655106999000","status":"APPROVED"}
+{"seller_id":2,"product_id":30,"rate":3.24,"review":null,"created_date":"1694006739000","last_modified_date":"1682886503000","status":"DELETED"}
+{"seller_id":1,"product_id":54,"rate":2.77,"review":null,"created_date":"1654908308000","last_modified_date":"1691098750000","status":"APPROVED"}
+{"seller_id":1,"product_id":44,"rate":2.72,"review":null,"created_date":"1681650232000","last_modified_date":"1660240943000","status":"WAITING_FOR_APPROVAL"}
+{"seller_id":10,"product_id":65,"rate":1.39,"review":null,"created_date":"1678576632000","last_modified_date":"1677361695000","status":"APPROVED"}
+{"seller_id":5,"product_id":46,"rate":2.22,"review":"Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis.","created_date":"1650832744000","last_modified_date":"1663555213000","status":"WAITING_FOR_APPROVAL"}
+{"seller_id":5,"product_id":100,"rate":4.74,"review":null,"created_date":"1648531284000","last_modified_date":"1668924720000","status":"DELETED"}
+{"seller_id":8,"product_id":67,"rate":4.23,"review":null,"created_date":"1671079202000","last_modified_date":"1664798427000","status":"APPROVED"}
+{"seller_id":10,"product_id":100,"rate":4.8,"review":null,"created_date":"1661865442000","last_modified_date":"1680350271000","status":"APPROVED"}
+{"seller_id":10,"product_id":42,"rate":3.11,"review":null,"created_date":"1694857494000","last_modified_date":"1651538468000","status":"APPROVED"}
+{"seller_id":2,"product_id":26,"rate":4.85,"review":null,"created_date":"1682775787000","last_modified_date":"1689695802000","status":"APPROVED"}
+{"seller_id":3,"product_id":78,"rate":3.24,"review":null,"created_date":"1652615935000","last_modified_date":"1677446457000","status":"APPROVED"}
+{"seller_id":3,"product_id":69,"rate":1.66,"review":null,"created_date":"1665511266000","last_modified_date":"1675097541000","status":"DELETED"}
+{"seller_id":1,"product_id":43,"rate":3.75,"review":null,"created_date":"1665991899000","last_modified_date":"1696173300000","status":"WAITING_FOR_APPROVAL"}
+{"seller_id":5,"product_id":27,"rate":4.17,"review":"Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.","created_date":"1682901620000","last_modified_date":"1660074731000","status":"DELETED"}
+{"seller_id":6,"product_id":31,"rate":2.45,"review":null,"created_date":"1693787458000","last_modified_date":"1683603612000","status":"APPROVED"}
+{"seller_id":1,"product_id":38,"rate":3.71,"review":null,"created_date":"1693159665000","last_modified_date":"1681156495000","status":"APPROVED"}
+{"seller_id":2,"product_id":1,"rate":1.81,"review":null,"created_date":"1646757764000","last_modified_date":"1684944247000","status":"APPROVED"}
+{"seller_id":1,"product_id":74,"rate":3.41,"review":"Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.","created_date":"1687488410000","last_modified_date":"1692690023000","status":"APPROVED"}
+{"seller_id":7,"product_id":42,"rate":1.6,"review":"Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, .","created_date":"1685241073000","last_modified_date":"1666295320000","status":"DELETED"}
+{"seller_id":7,"product_id":12,"rate":1.63,"review":null,"created_date":"1664404845000","last_modified_date":"1690899171000","status":"DELETED"}
+{"seller_id":10,"product_id":72,"rate":4.54,"review":"Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed.","created_date":"1678243984000","last_modified_date":"1691008537000","status":"APPROVED"}
+{"seller_id":2,"product_id":51,"rate":1.03,"review":null,"created_date":"1650574301000","last_modified_date":"1692089702000","status":"APPROVED"}
+{"seller_id":5,"product_id":86,"rate":1.42,"review":"Proin risus. Praesent lectus. Vestibulum quam sapien, varius ut, blandit.","created_date":"1659981976000","last_modified_date":"1655544624000","status":"APPROVED"}
+{"seller_id":3,"product_id":73,"rate":4.82,"review":"In est risus, auctor sed, tristique in, tempus sit amet, sem. Fusce consequat.","created_date":"1673261711000","last_modified_date":"1657217759000","status":"DELETED"}
+{"seller_id":3,"product_id":9,"rate":1.03,"review":null,"created_date":"1681879620000","last_modified_date":"1646827324000","status":"WAITING_FOR_APPROVAL"}
+{"seller_id":2,"product_id":65,"rate":1.42,"review":null,"created_date":"1680762772000","last_modified_date":"1654719987000","status":"WAITING_FOR_APPROVAL"}
+{"seller_id":1,"product_id":44,"rate":2.35,"review":null,"created_date":"1657180377000","last_modified_date":"1688233956000","status":"APPROVED"}
+{"seller_id":2,"product_id":75,"rate":4.93,"review":null,"created_date":"1678130268000","last_modified_date":"1694798751000","status":"DELETED"}
+{"seller_id":1,"product_id":29,"rate":4.06,"review":null,"created_date":"1664116967000","last_modified_date":"1689942177000","status":"APPROVED"}
