@@ -1,27 +1,28 @@
-# Merge the tables, products and daily_sales_info.
-# Find the critical threshold and return the data by ascending order.
-# If the top is 0 or None which means return all data.
-# If the top is different from 0 or None, return the top 'n' output where critical threshold is under 30.
-def take_join_tables_data(connection, top):
-    query = "SELECT\n"\
-                "\tdsi.seller_id,\n"\
-                "\tdsi.product_id,\n"\
-                "\tdsi.daily_average_sale_quantity,\n"\
-                "\tdsi.daily_average_sale_price,\n"\
-                "\tROUND((p.stock / dsi.daily_average_sale_quantity), 3) as critical_threshold,\n"\
-                "\tp.name,\n" \
-                "\tp.brand,\n" \
-                "\tp.category,\n" \
-                "\tp.product_size\n"\
-                "FROM daily_sales_info dsi\n"\
-                "JOIN products p ON dsi.product_id = p.id\n"
+def get_filtered_data(connection, top_n):
+    query = """
+            SELECT 
+                seller_id,
+                product_id,
+                daily_average_sale_quantity,
+                daily_average_sale_price,
+                critical_threshold,
+                name,
+                brand,
+                category,
+                product_size
+            FROM result_table"""
 
-    if top is 0 or top is None:
-        query = query + " ORDER BY critical_threshold;"
+    # If the top is 0 or None which means return all data by ascending order
+    if top_n is 0 or top_n is None:
+        query = query + """
+            ORDER BY critical_threshold;"""
+
+    # If the top is different from 0 or None, return the top 'n' output where critical threshold is under 30.
     else:
-        query = query + "WHERE ROUND((p.stock / dsi.daily_average_sale_quantity), 3) < 30.000\n" \
-                        "ORDER BY critical_threshold\n" + \
-                        "LIMIT " + str(top) + ";"
+        query = query + """
+            WHERE critical_threshold < 30.000
+            ORDER BY critical_threshold 
+            LIMIT {};""".format(top_n)
 
     return read_data_helper(connection, query)
 

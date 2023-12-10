@@ -1,0 +1,16 @@
+"seller_id","product_id","daily_average_sale_quantity","daily_average_sale_price","critical_threshold","name","brand","category","product_size","stock"
+100,1,0.2,2600.0,5.0,"Samsung Galaxy S3","Samsung","Mobile Phone",NULL,1
+100,2,0.067,2333.333,74.627,"Apple Macbook Air M2","Apple","Computer",NULL,5
+200,3,0.1,99.999,30.0,"Docker Sport NM1","Docker","Shoes","43",3
+200,4,0.033,8.333,60.606,"Hat","LCW","Hat","M",2
+300,5,0.033,1.133,30.303,"Karaca Fork","Karaca","Kitchen",NULL,1
+100,1,0.2,2600.0,5.0,"Samsung Galaxy S3","Samsung","Mobile Phone",NULL,1
+100,2,0.067,2333.333,74.627,"Apple Macbook Air M2","Apple","Computer",NULL,5
+200,3,0.1,99.999,30.0,"Docker Sport NM1","Docker","Shoes","43",3
+200,4,0.033,8.333,60.606,"Hat","LCW","Hat","M",2
+300,5,0.033,1.133,30.303,"Karaca Fork","Karaca","Kitchen",NULL,1
+100,1,0.2,2600.0,5.0,"Samsung Galaxy S3","Samsung","Mobile Phone",NULL,1
+100,2,0.067,2333.333,74.627,"Apple Macbook Air M2","Apple","Computer",NULL,5
+200,3,0.1,99.999,30.0,"Docker Sport NM1","Docker","Shoes","43",3
+200,4,0.033,8.333,60.606,"Hat","LCW","Hat","M",2
+300,5,0.033,1.133,30.303,"Karaca Fork","Karaca","Kitchen",NULL,1

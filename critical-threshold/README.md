@@ -14,7 +14,7 @@ Try to find products that are at a critical threshold for each seller and produc
 Find products with a critical threshold under 30(N). The critical threshold might be changed.
 ## EXPECTED-EXAMPLE OUTPUT
 EXPECTED OUTPUT:
->After finding products that are at critical condition, write an endpoint, and return product name, brand, color etc with a critical threshold. Return top 1 products desc by critical threshold for each seller and product. Return the result by basic API.
+>After finding products that are at critical condition, write an endpoint, and return product name, brand, color etc. with a critical threshold. Return top 1 products desc by critical threshold for each seller and product. Return the result by basic API.
 
 EXAMPLE OUTPUT:
 <br><pre>{

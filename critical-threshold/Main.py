@@ -9,19 +9,21 @@ connector = SQLConnector()
 connection = connector.create_connection()
 
 
-# Return the data by ascending order of critical threshold.
+# Return the all data by ascending order of critical threshold.
 @app.route("/data")
 def index():
-    data = DataProcessor.take_join_tables_data(connection, top=None)
+    # Example URL: http://127.0.0.1:8080/data
+    data = DataProcessor.get_filtered_data(connection, top_n=None)
 
     return data
 
 
-# Return the top data by critical threshold under 30.
+# Return the top 'n' data by critical threshold under 30.
 @app.route("/data/", methods=["GET"])
 def top_pagination():
+    # Example URL: http://127.0.0.1:8080/data/?top=3
     top = request.args.get("top", type=int, default=1)
-    data = DataProcessor.take_join_tables_data(connection, top)
+    data = DataProcessor.get_filtered_data(connection, top)
 
     return data
 
