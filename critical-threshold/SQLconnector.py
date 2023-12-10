@@ -1,7 +1,7 @@
 import psycopg2
 
 
-class SQL_connector:
+class SQLConnector:
     connection = None
 
     def create_connection(self):

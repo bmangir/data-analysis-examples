@@ -1,10 +1,4 @@
-CREATE TABLE daily_sales_info(
-	seller_id integer,
-	product_id integer,
-	daily_average_sale_quantity numeric,
-	daily_average_sale_price numeric
-);
-
+-- Add the result in output table where between the current date and its before 30 days which is 1 month
 INSERT INTO daily_sales_info
 SELECT
     seller_id,

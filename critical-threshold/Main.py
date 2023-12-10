@@ -1,11 +1,11 @@
 from flask import Flask
 from flask import request
-from SQLconnector import SQL_connector
+from SQLconnector import SQLConnector
 import DataProcessor
 
 app = Flask(__name__)
 
-connector = SQL_connector()
+connector = SQLConnector()
 connection = connector.create_connection()
 
 

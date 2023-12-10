@@ -1,7 +1,7 @@
 # Merge the tables, products and daily_sales_info.
 # Find the critical threshold and return the data by ascending order.
 # If the top is 0 or None which means return all data.
-# If the top is different from 0 or None, return the top 'x' output where critical threshold is under 30.
+# If the top is different from 0 or None, return the top 'n' output where critical threshold is under 30.
 def take_join_tables_data(connection, top):
     query = "SELECT\n"\
                 "\tdsi.seller_id,\n"\

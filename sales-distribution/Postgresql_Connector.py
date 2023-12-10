@@ -1,7 +1,7 @@
 import psycopg2
 
 
-class Postgresql_Connector:
+class PostgresqlConnector:
     connection = None
 
     def create_connection(self):

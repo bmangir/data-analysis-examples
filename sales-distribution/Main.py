@@ -1,11 +1,11 @@
 from flask import Flask
 from flask import request
-from Postgresql_Connector import Postgresql_Connector
+from Postgresql_Connector import PostgresqlConnector
 import Sales_Report_Processor
 
 app = Flask(__name__)
 
-connectorToDatabase = Postgresql_Connector()
+connectorToDatabase = PostgresqlConnector()
 connection = connectorToDatabase.create_connection()  # Create a connection
 
 
