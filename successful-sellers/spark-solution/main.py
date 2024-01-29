@@ -163,12 +163,12 @@ visits_scheme = StructType(
     ]
 )
 
-# Read json files
-orders_df = read(spark, "/Users/berkantmangir/Desktop/PROJECTS/data-analysis-examples/successful-sellers/data/orders.json", order_scheme).withColumnRenamed("sellerId", "seller_id")
-prod_review_df = read(spark, "/Users/berkantmangir/Desktop/PROJECTS/data-analysis-examples/successful-sellers/data/productreviews.json", prod_review_scheme)
-seller_details_df = read_seller_details(path="/Users/berkantmangir/Desktop/PROJECTS/data-analysis-examples/successful-sellers/data/sellerdetails.json")
-seller_scores_df = read(spark, "/Users/berkantmangir/Desktop/PROJECTS/data-analysis-examples/successful-sellers/data/sellerscores.json", seller_scores_scheme)
-visits_df = read(spark, "/Users/berkantmangir/Desktop/PROJECTS/data-analysis-examples/successful-sellers/data/visits.json", visits_scheme)
+# Read json files from data directory
+orders_df = read(spark, "orders.json", order_scheme).withColumnRenamed("sellerId", "seller_id")
+prod_review_df = read(spark, "productreviews.json", prod_review_scheme)
+seller_details_df = read_seller_details(path="sellerdetails.json")
+seller_scores_df = read(spark, "sellerscores.json", seller_scores_scheme)
+visits_df = read(spark, "visits.json", visits_scheme)
 
 # Make group by
 grouped_orders = orders_grouped_by(orders_df)

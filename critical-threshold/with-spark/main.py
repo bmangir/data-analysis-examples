@@ -58,9 +58,9 @@ products_scheme = StructType(
     ]
 )
 
-# Read files
-orders_df = read(spark, "/Users/berkantmangir/Desktop/PROJECTS/data-analysis-examples/critical-threshold/data/orders_nsdo.json", orders_schema)
-products_df = read(spark, "/Users/berkantmangir/Desktop/PROJECTS/data-analysis-examples/critical-threshold/data/products_nsdo.json", products_scheme)
+# Read files from data directory
+orders_df = read(spark, "orders_nsdo.json", orders_schema)
+products_df = read(spark, "products_nsdo.json", products_scheme)
 
 daily_sales_info_df = find_daily_sales_information(orders_df)
 

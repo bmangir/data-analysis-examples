@@ -38,10 +38,8 @@ schema = StructType(
     ]
 )
 
-# Read file
-orders_df = read(spark,
-                 "/Users/berkantmangir/Desktop/PROJECTS/data-analysis-examples/sales-distribution/data/orders_input.json",
-                 schema=schema)
+# Read file from data directory
+orders_df = read(spark, "orders_input.json", schema=schema)
 
 distributed_sales_df = find_distributions(orders_df)
 
