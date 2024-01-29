@@ -10,3 +10,5 @@ files include input data as json format.<br>
 files include sql queries which are creating table of input data and insert the data.<br>
 `example-data-result`
 contains example result of queries that are expected.<br>
+`spark-solution`
+contains pyspark of sql version
