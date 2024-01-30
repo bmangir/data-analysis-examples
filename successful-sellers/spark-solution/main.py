@@ -24,7 +24,7 @@ def read_seller_details(path):
         .withColumnRenamed("createdDate", "created_date")
 
 
-def orders_grouped_by(df):
+def find_total_sold_products(df):
     """
     :param df: dataframe of orders file
     :return: version of grouped by seller id with counted total sold products
@@ -34,7 +34,7 @@ def orders_grouped_by(df):
         .agg(count("itemId").alias("total_sold_prod"))
 
 
-def visits_grouped_by(df):
+def find_total_visits_of_sellers(df):
     """
     :param df: dataframe of visits file
     :return: version of grouped by seller id with counted total visits
@@ -44,7 +44,7 @@ def visits_grouped_by(df):
         .agg(count("*").alias("total_visits"))
 
 
-def product_review_grouped_by(df):
+def find_average_review_rates_of_sellers(df):
     """
     :param df: dataframe of product reviews file
     :return: version of grouped by seller id where status is 'APPROVED' with calculated average rate of each seller
@@ -55,7 +55,7 @@ def product_review_grouped_by(df):
         .agg(round(avg("rate"), 2).alias("avg_rate"))
 
 
-def seller_scores_grouped_by(df):
+def find_average_seller_scores(df):
     """
     :param df: dataframe of seller scores file
     :return: version of grouped by seller id with calculated average score of each seller
@@ -72,23 +72,23 @@ def information_of_seller():
     """
     return seller_details_df \
         .join(
-            other=grouped_orders,
-            on=seller_details_df["seller_id"] == grouped_orders["seller_id"],
+            other=total_sold_prod_of_sellers,
+            on=seller_details_df["seller_id"] == total_sold_prod_of_sellers["seller_id"],
             how="left") \
-        .join(other=grouped_visits,
-              on=seller_details_df["seller_id"] == grouped_visits["seller_id"],
+        .join(other=total_visits_of_seller,
+              on=seller_details_df["seller_id"] == total_visits_of_seller["seller_id"],
               how="left") \
-        .join(other=grouped_prod_reviews,
-              on=seller_details_df["seller_id"] == grouped_prod_reviews["seller_id"],
+        .join(other=avg_review_rate_of_sellers,
+              on=seller_details_df["seller_id"] == avg_review_rate_of_sellers["seller_id"],
               how="left") \
-        .join(other=grouped_seller_scores,
-              on=seller_details_df["seller_id"] == grouped_seller_scores["seller_id"],
+        .join(other=avg_seller_scores,
+              on=seller_details_df["seller_id"] == avg_seller_scores["seller_id"],
               how="left") \
-        .withColumn("total_visits", coalesce(grouped_visits["total_visits"], lit(0.00))) \
-        .withColumn("avg_score", coalesce(grouped_seller_scores["avg_score"], lit(0.00))) \
-        .withColumn("avg_rate", coalesce(grouped_prod_reviews["avg_rate"], lit(0.00))) \
-        .drop("email", "name", "status", grouped_orders["seller_id"], grouped_visits["seller_id"],
-              grouped_prod_reviews["seller_id"], grouped_seller_scores["seller_id"])
+        .withColumn("total_visits", coalesce(total_visits_of_seller["total_visits"], lit(0.00))) \
+        .withColumn("avg_score", coalesce(avg_seller_scores["avg_score"], lit(0.00))) \
+        .withColumn("avg_rate", coalesce(avg_review_rate_of_sellers["avg_rate"], lit(0.00))) \
+        .drop("email", "name", "status", total_sold_prod_of_sellers["seller_id"], total_visits_of_seller["seller_id"],
+              avg_review_rate_of_sellers["seller_id"], avg_seller_scores["seller_id"])
 
 
 def is_seller_successful(df):
@@ -171,10 +171,10 @@ seller_scores_df = read(spark, "sellerscores.json", seller_scores_scheme)
 visits_df = read(spark, "visits.json", visits_scheme)
 
 # Make group by
-grouped_orders = orders_grouped_by(orders_df)
-grouped_visits = visits_grouped_by(visits_df)
-grouped_prod_reviews = product_review_grouped_by(prod_review_df)
-grouped_seller_scores = seller_scores_grouped_by(seller_scores_df)
+total_sold_prod_of_sellers = find_total_sold_products(orders_df)
+total_visits_of_seller = find_total_visits_of_sellers(visits_df)
+avg_review_rate_of_sellers = find_average_review_rates_of_sellers(prod_review_df)
+avg_seller_scores = find_average_seller_scores(seller_scores_df)
 
 seller_info = information_of_seller()
 
